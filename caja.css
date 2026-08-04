@@ -1,0 +1,37 @@
+body {
+      background-color: #c50f0f;   
+      color:bisque;
+      display: flex;             
+      justify-content: center;    
+      align-items: center;        
+      height: 20vh;
+      width: 150vh;              
+      margin: 0vh;
+    }
+    .caja {
+      background-color: rgb(11, 11, 7);
+      border-radius: 15px 10px;
+    
+      border: 2px solid rgb(14, 183, 198);
+      box-shadow: 5px 5px 15px rgb(28, 190, 28);
+      padding: 30px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      animation: mover 4s infinite alternate ease-in-out;
+    }
+    @keyframes mover{
+      0%{
+        transform: translateX(-250px);
+        background-color: blueviolet;
+      }
+      50%{
+        background-color: antiquewhite;
+        transform: rotate(180deg);
+      }
+      100%{
+        transform: translateX(250px) rotate(360deg);
+        background: #bb0bd2;
+      }
+    }

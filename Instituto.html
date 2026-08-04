@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Gubernamental Perla del Ulúa</title>
+  <link rel="stylesheet" href="animacion instituto.css">
+</head>
+<body>
+
+  <!-- Encabezado y Menú de Navegación -->
+  <header>
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Logo Instituto Perla del Ulúa" class="logo"> 
+      <h1>Instituto Gubernamental Perla del Ulúa</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" class="nav-link active" onclick="mostrarSeccion('inicio', event)">Inicio</a></li>
+        <li><a href="#" class="nav-link" onclick="mostrarSeccion('historia', event)">Historia</a></li>
+        <li><a href="#" class="nav-link" onclick="mostrarSeccion('contacto', event)">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main>
+    <!-- Sección Inicio -->
+    <section id="inicio" class="seccion-pagina active-section fade-in">
+      <h2>Bienvenidos</h2>
+      <p>Formando generaciones con excelencia académica y valores.</p>
+    </section>
+
+    <!-- Sección Historia -->
+    <section id="historia" class="seccion-pagina fade-in">
+      <h2>Nuestra Historia</h2>
+      <p>
+        Fundado en el corazón de El Progreso, Yoro, el Instituto Gubernamental Perla del Ulúa 
+        ha sido un faro de conocimiento desde sus inicios. Con el compromiso de formar 
+        generaciones en valores, ciencia y cultura, se ha convertido en un símbolo de 
+        excelencia académica en la región.
+      </p>
+      <p>
+        A lo largo de los años, nuestros estudiantes han destacado en diversas áreas, 
+        llevando con orgullo el nombre del instituto y contribuyendo al desarrollo 
+        comunitario y nacional.
+      </p>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="seccion-pagina fade-in">
+      <h2>Contacto</h2>
+      <p><strong>Dirección:</strong> El Progreso, Yoro, Honduras</p>
+      <p><strong>Correo:</strong> contacto@perladelulua.edu.hn</p>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2026 Instituto Gubernamental Perla del Ulúa. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script para alternar secciones -->
+  <script>
+    function mostrarSeccion(idSeccion, event) {
+      if (event) event.preventDefault();
+
+      const secciones = document.querySelectorAll('.seccion-pagina');
+      secciones.forEach(sec => sec.classList.remove('active-section'));
+
+      const enlaces = document.querySelectorAll('.nav-link');
+      enlaces.forEach(link => link.classList.remove('active'));
+
+      const seccionSeleccionada = document.getElementById(idSeccion);
+      if (seccionSeleccionada) {
+        seccionSeleccionada.classList.add('active-section');
+      }
+
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>

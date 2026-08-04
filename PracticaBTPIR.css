@@ -1,0 +1,8 @@
+h1{
+   color:rgb(35, 248, 46);
+   background-color: blueviolet;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-shadow: 15px;
+    text-box: calc(12px);
+}
